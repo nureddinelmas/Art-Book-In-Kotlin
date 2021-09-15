@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="add"
+    android:hapticFeedbackEnabled="false"
+    android:longClickable="false"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".DetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:onClick="selectImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectimage" />
+
+    <EditText
+        android:id="@+id/artBookName"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:autoSizeStepGranularity="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:hint="Art Name"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:textColor="#D82121"
+        android:textColorHighlight="#4A148C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/artBookCountry"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:hint="Art Country"
+        android:inputType="textPersonName"
+        android:textColor="#D82121"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artBookName" />
+
+    <EditText
+        android:id="@+id/artBookYear"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:hint="Year"
+        android:inputType="number"
+        android:textColor="#D82121"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artBookCountry" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="111dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="72dp"
+        android:background="@color/cardview_shadow_end_color"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="saveClicked"
+        android:text="Save"
+        android:textColor="#D82121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artBookYear" />
+</androidx.constraintlayout.widget.ConstraintLayout>
